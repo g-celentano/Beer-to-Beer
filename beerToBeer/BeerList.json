@@ -3,24 +3,32 @@
         "name" : "Ichnusa",
         "imageName" : "0",
         "type" : "Golden Lager ... ",
-        "foodAdvice" : "Magn't o cazz"
+        "grad" : "bho %",
+        "foodAdvice" : "Magn't o cazz",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem aliquet, tempor nisl sit amet, tincidunt est. Aliquam id cursus lectus. Sed tincidunt posuere eros at gravida. Praesent rhoncus malesuada tellus, non tincidunt elit pretium at. Ut gravida."
     },
     {
-        "name" : "Ichnusa",
-        "imageName" : "0",
+        "name" : "Peroni",
+        "imageName" : "2",
         "type" : "Golden Lager ... ",
-        "foodAdvice" : "Magn't o cazz"
+        "grad" : "bho %",
+        "foodAdvice" : "Magn't o cazz",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem aliquet, tempor nisl sit amet, tincidunt est. Aliquam id cursus lectus. Sed tincidunt posuere eros at gravida. Praesent rhoncus malesuada tellus, non tincidunt elit pretium at. Ut gravida."
     },
     {
-        "name" : "Ichnusa",
-        "imageName" : "0",
+        "name" : "Poretti",
+        "imageName" : "1",
         "type" : "Golden Lager ... ",
-        "foodAdvice" : "Magn't o cazz"
+        "grad" : "bho %",
+        "foodAdvice" : "Magn't o cazz",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem aliquet, tempor nisl sit amet, tincidunt est. Aliquam id cursus lectus. Sed tincidunt posuere eros at gravida. Praesent rhoncus malesuada tellus, non tincidunt elit pretium at. Ut gravida."
     },
     {
-        "name" : "Ichnusa",
+        "name" : "Heineken",
         "imageName" : "0",
         "type" : "Golden Lager ... ",
-        "foodAdvice" : "Magn't o cazz"
+        "grad" : "bho %",
+        "foodAdvice" : "Magn't o cazz",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem aliquet, tempor nisl sit amet, tincidunt est. Aliquam id cursus lectus. Sed tincidunt posuere eros at gravida. Praesent rhoncus malesuada tellus, non tincidunt elit pretium at. Ut gravida."
     },
 ]

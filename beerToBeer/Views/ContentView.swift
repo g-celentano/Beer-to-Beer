@@ -7,9 +7,9 @@
 
 import SwiftUI
 
+let beerList: [BeerClass] = load("BeerList")
+
 struct ContentView: View {
-    
-    let beerList: [BeerClass] = load("BeerList")
     
     var body: some View {
         VStack {
@@ -17,6 +17,10 @@ struct ContentView: View {
                 ListView()
                     .tabItem{
                         Label("List", systemImage: "book")
+                    }
+                TodaysBeer(beer: beerList.randomElement() ?? BeerClass())
+                    .tabItem {
+                        Label("Today's Beer", systemImage: "sun.and.horizon")
                     }
                 
             }
