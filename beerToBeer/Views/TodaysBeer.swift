@@ -68,6 +68,6 @@ struct TodaysBeer: View {
 
 struct TodaysBeer_Previews: PreviewProvider {
     static var previews: some View {
-        TodaysBeer(beer: BeerClass(name: "Birra", imageName: "0", type: "tipo", grad: "gradi", foodAdvice: "cibo", beerDesc: "Descrizione"))
+        TodaysBeer(beer: BeerClass(name: "Birra", imageName: "0", type: "tipo", grad: "gradi", nationality: "nazione", beerDesc: "Descrizione"))
     }
 }

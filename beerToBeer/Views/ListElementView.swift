@@ -52,9 +52,9 @@ struct ListElementView: View {
                     .frame(width: width*0.65, alignment: .leading)
                     .padding(.top, height * 0.01)
                     HStack{
-                        Text("Food Advice: ")
+                        Text("Nationality: ")
                             .fontWeight(.semibold)
-                        Text(beer.foodAdvice)
+                        Text(beer.nationality)
                             
                     }
                     .frame(width: width*0.65, alignment: .leading)
@@ -108,6 +108,6 @@ struct ListElementView: View {
 
 struct ListElementView_Previews: PreviewProvider {
     static var previews: some View {
-        ListElementView(beer: BeerClass(name: "Ciao mondo", imageName: "0", type: "tipo", grad: "gradi", foodAdvice: "cibo", beerDesc: "Descrizione"), activeIndex: .constant(-1), localIndex: 0)
+        ListElementView(beer: BeerClass(name: "Ciao mondo", imageName: "0", type: "tipo", grad: "gradi", nationality: "nazione", beerDesc: "Descrizione"), activeIndex: .constant(-1), localIndex: 0)
     }
 }

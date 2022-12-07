@@ -1,37 +1,82 @@
 [
     {
         "name" : "Ichnusa",
-        "imageName" : "0",
+        "imageName" : "ichnusa",
         "type" : "Golden Lager with bottom fermentation ",
         "nationality" : "Italian🇮🇹",
-        "alcoholContet" : "4,7%"
+        "grad" : "4,7%",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor tempor pretium. Donec pretium faucibus odio non laoreet. Donec bibendum nunc sem, in accumsan tellus pretium fringilla. Integer tincidunt venenatis tellus, vehicula varius nulla aliquam id. Praesent nec ipsum nibh."
     },
     {
         "name" : "Heineken",
-        "imageName" : "0",
+        "imageName" : "heineken",
         "type" : "Golden Pilsner with bottom fermentation",
         "nationality" : "Dutch🇳🇱",
-        "alcoholContet" : "5,0%"
+        "grad" : "5,0%",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor tempor pretium. Donec pretium faucibus odio non laoreet. Donec bibendum nunc sem, in accumsan tellus pretium fringilla. Integer tincidunt venenatis tellus, vehicula varius nulla aliquam id. Praesent nec ipsum nibh."
     },
     {
         "name" : "Beck's",
-        "imageName" : "0",
+        "imageName" : "beck's",
         "type" : "Light yellow Pilsner with bottom fermentation",
         "nationality" : "Germany🇩🇪",
-        "alcoholContet" : "5,0%"
+        "grad" : "5,0%",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor tempor pretium. Donec pretium faucibus odio non laoreet. Donec bibendum nunc sem, in accumsan tellus pretium fringilla. Integer tincidunt venenatis tellus, vehicula varius nulla aliquam id. Praesent nec ipsum nibh."
     },
     {
         "name" : "Tennent's Super",
-        "imageName" : "0",
+        "imageName" : "tennent's",
         "type" : "Intense yellow Lager with bottom fermentation",
-        "nationality" : "Magn't o cazz",
-        "alcoholContet" : "9,0%"
+        "nationality" : "Scottish🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "grad" : "9,0%",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor tempor pretium. Donec pretium faucibus odio non laoreet. Donec bibendum nunc sem, in accumsan tellus pretium fringilla. Integer tincidunt venenatis tellus, vehicula varius nulla aliquam id. Praesent nec ipsum nibh."
     },
     {
-        "name" : "Tennent's Super",
-        "imageName" : "0",
-        "type" : "Intense yellow Lager with bottom fermentation",
-        "nationality" : "Magn't o cazz",
-        "alcoholContet" : "9,0%"
+        "name" : "Leffe Blonde",
+        "imageName" : "leffeBlonde",
+        "type" : "Golden Belgian Blond Ale with top fermentation",
+        "nationality" : "Belgian🇧🇪",
+        "grad" : "6,6%",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor tempor pretium. Donec pretium faucibus odio non laoreet. Donec bibendum nunc sem, in accumsan tellus pretium fringilla. Integer tincidunt venenatis tellus, vehicula varius nulla aliquam id. Praesent nec ipsum nibh."
+    },
+    {
+        "name" : "Leffe Rouge",
+        "imageName" : "leffeRouge",
+        "type" : "Amber Dubbel with top fermentation",
+        "nationality" : "Belgian🇧🇪",
+        "grad" : "6,6%",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor tempor pretium. Donec pretium faucibus odio non laoreet. Donec bibendum nunc sem, in accumsan tellus pretium fringilla. Integer tincidunt venenatis tellus, vehicula varius nulla aliquam id. Praesent nec ipsum nibh."
+    },
+    {
+        "name" : "Leffe Ambrée",
+        "imageName" : "leffeAmbree",
+        "type" : "Amber Dubbel with top fermentation",
+        "nationality" : "Belgian🇧🇪",
+        "grad" : "6,6%",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor tempor pretium. Donec pretium faucibus odio non laoreet. Donec bibendum nunc sem, in accumsan tellus pretium fringilla. Integer tincidunt venenatis tellus, vehicula varius nulla aliquam id. Praesent nec ipsum nibh."
+    },
+    {
+        "name" : "Corona",
+        "imageName" : "corona",
+        "type" : "Straw yellow Lager with bottom fermentation",
+        "nationality" : "Mexican🇲🇽",
+        "grad" : "4,6%",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor tempor pretium. Donec pretium faucibus odio non laoreet. Donec bibendum nunc sem, in accumsan tellus pretium fringilla. Integer tincidunt venenatis tellus, vehicula varius nulla aliquam id. Praesent nec ipsum nibh."
+    },
+    {
+        "name" : "Nastro Azzurro",
+        "imageName" : "nastroAzzurro",
+        "type" : "Straw yellow Pilsner with bottom fermentation",
+        "nationality" : "Italian🇮🇹",
+        "grad" : "5,1%",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor tempor pretium. Donec pretium faucibus odio non laoreet. Donec bibendum nunc sem, in accumsan tellus pretium fringilla. Integer tincidunt venenatis tellus, vehicula varius nulla aliquam id. Praesent nec ipsum nibh."
+    },
+    {
+        "name" : "Desperados",
+        "imageName" : "desperados",
+        "type" : "Golden Lager with bottom fermentation",
+        "nationality" : "French🇫🇷",
+        "grad" : "5,9%",
+        "beerDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor tempor pretium. Donec pretium faucibus odio non laoreet. Donec bibendum nunc sem, in accumsan tellus pretium fringilla. Integer tincidunt venenatis tellus, vehicula varius nulla aliquam id. Praesent nec ipsum nibh."
     },
 ]

@@ -33,8 +33,6 @@ struct BeerClass : Codable, Hashable {
         self.beerDesc = beerDesc
     }
     
-    }
-    
 }
 
 
