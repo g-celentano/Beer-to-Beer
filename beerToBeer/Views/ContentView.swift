@@ -14,17 +14,29 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView{
-                ListView()
-                    .tabItem{
-                        Label("List", systemImage: "book")
-                    }
-                TodaysBeer(beer: beerList.randomElement() ?? BeerClass())
-                    .tabItem {
-                        Label("Today's Beer", systemImage: "sun.and.horizon")
-                    }
+                Group{
+                    ListView()
+                        .tabItem{
+                            Label("List", systemImage: "book")
+                        }
+                    
+                    TodaysBeer(beer: beerList.randomElement() ?? BeerClass())
+                        .tabItem {
+                            Label("Today's Beer", systemImage: "sun.and.horizon")
+                        }
+                        
+                }
+                .toolbar(.visible, for: .tabBar)
+                .toolbarBackground(Color("60").opacity(0), for: .tabBar)
+                    
                 
             }
+            .frame(width: width, height: height)
+            .edgesIgnoringSafeArea(.leading)
             .accentColor(Color("30"))
+            
+            
+
         }
         .padding()
         .background(Color("60"))

@@ -19,9 +19,9 @@ struct ListElementView: View {
     var body: some View {
         HStack{
             Image(beer.imageName)
-                .scaleEffect(clicked ? 2.2 : 2)
-                .padding(.trailing)
-                .padding(.leading)
+                .scaleEffect(clicked ? width * 0.00075 : width * 0.001)
+                .frame(width: width*0.25)
+                
             VStack{
                 HStack{
                     Text(beer.name)
@@ -32,9 +32,10 @@ struct ListElementView: View {
                         .scaleEffect(width * 0.0035)
                         .rotationEffect(.degrees(iconRotation))
                         .padding(.trailing, width*0.01)
+                    
                 }
                 .padding(.top, clicked ? height * 0.01 : height * 0.02)
-                .frame(width: width * 0.7, alignment: .leading)
+                .frame(width: width * 0.6,height: height*0.1, alignment: .leading)
                 Spacer()
                 VStack{
                     HStack{
@@ -47,6 +48,7 @@ struct ListElementView: View {
                     HStack{
                         Text("Type: ")
                             .fontWeight(.semibold)
+                            .frame(height: height*0.05, alignment: .top)
                         Text(beer.type)
                     }
                     .frame(width: width*0.65, alignment: .leading)
@@ -65,7 +67,6 @@ struct ListElementView: View {
                 .frame(height: clicked ? height * 0.2 : 0)
                 Spacer()
             }
-                
             Spacer()
         }
         .padding()
@@ -108,6 +109,6 @@ struct ListElementView: View {
 
 struct ListElementView_Previews: PreviewProvider {
     static var previews: some View {
-        ListElementView(beer: BeerClass(name: "Ciao mondo", imageName: "0", type: "tipo", grad: "gradi", nationality: "nazione", beerDesc: "Descrizione"), activeIndex: .constant(-1), localIndex: 0)
+        ListElementView(beer: BeerClass(name: "Ciao mondo", imageName: "ichnusa", type: "tipo da due righe di merda cosi lunghe", grad: "gradi", nationality: "nazione", beerDesc: "Descrizione"), activeIndex: .constant(-1), localIndex: 0)
     }
 }

@@ -17,12 +17,16 @@ struct TodaysBeer: View {
                 .fontWeight(.heavy)
                 .foregroundColor(Color("30"))
                 .frame(width: width*0.9, alignment: .leading)
+                
+            
             
             HStack{
                 Image(beer.imageName)
-                    .scaleEffect(width*0.015)
+                    .scaleEffect(width*0.0016)
                     .rotationEffect(.degrees(15))
-                    .padding(.leading)
+                    .frame(width: width * 0.38, height: height*0.3)
+                    .padding(.trailing)
+                    
                 Spacer()
                 VStack{
                     Text(beer.name)
@@ -47,9 +51,12 @@ struct TodaysBeer: View {
                     .frame(width: width*0.5, alignment: .leading)
                     .padding(.top, height*0.001)
                     
-                    Text(beer.beerDesc)
-                    .frame(width: width*0.5, alignment: .leading)
-                    .padding(.top, height*0.001)
+                    ScrollView{
+                        Text(beer.beerDesc)
+                        .frame(width: width*0.5, alignment: .leading)
+                        .padding(.top, height*0.001)
+                        
+                    }
                     
                 }
                 .foregroundColor(.white)
@@ -63,11 +70,12 @@ struct TodaysBeer: View {
         .frame(width: width, height: height)
         .background(Color("60"))
         
+        
     }
 }
 
 struct TodaysBeer_Previews: PreviewProvider {
     static var previews: some View {
-        TodaysBeer(beer: BeerClass(name: "Birra", imageName: "0", type: "tipo", grad: "gradi", nationality: "nazione", beerDesc: "Descrizione"))
+        TodaysBeer(beer: BeerClass(name: "Birra", imageName: "peroni", type: "tipo", grad: "gradi", nationality: "nazione", beerDesc: "Descrizione"))
     }
 }

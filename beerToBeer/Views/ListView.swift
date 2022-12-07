@@ -33,8 +33,10 @@ struct ListView: View {
                 }
             }
             .frame(width: width*0.9)
+            
             .padding()
         }
+        .edgesIgnoringSafeArea(.bottom)
         .background(Color("60"))
         
         
