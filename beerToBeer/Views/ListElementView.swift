@@ -37,7 +37,7 @@ struct ListElementView: View {
                         .rotationEffect(.degrees(iconRotation))
                 }
                 .padding(.top, clicked ? height * 0.01 : height * 0.02)
-                .frame(width: width*0.7, alignment: .leading)
+                .frame(width: width * 0.7, alignment: .leading)
                 Spacer()
                 VStack{
                     HStack{
@@ -73,9 +73,9 @@ struct ListElementView: View {
         }
         .padding()
         .frame(width: width * 0.9, height: localHeight)
-        .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color("60")))
+        .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color("listElBG")))
         //.foregroundColor(Color("personalRed"))
-        .foregroundColor(Color("30"))
+        .foregroundColor(Color("60"))
         .clipped()
         .onChange(of: activeIndex, perform: { newValue in
             withAnimation{

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20819EEC294096A600615866 /* JSONLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20819EEB294096A600615866 /* JSONLoad.swift */; };
+		20819EEE2940979100615866 /* BeerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20819EED2940979100615866 /* BeerClass.swift */; };
+		20819EF1294098AB00615866 /* BeerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 20819EF0294098AB00615866 /* BeerList.json */; };
 		E736825A293FD6AB0076934F /* ListElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7368259293FD6AB0076934F /* ListElementView.swift */; };
 		E777EC94293FA19500CF2F06 /* beerToBeerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E777EC93293FA19500CF2F06 /* beerToBeerApp.swift */; };
 		E777EC96293FA19500CF2F06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E777EC95293FA19500CF2F06 /* ContentView.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20819EEB294096A600615866 /* JSONLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoad.swift; sourceTree = "<group>"; };
+		20819EED2940979100615866 /* BeerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerClass.swift; sourceTree = "<group>"; };
+		20819EF0294098AB00615866 /* BeerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BeerList.json; sourceTree = "<group>"; };
 		E7368259293FD6AB0076934F /* ListElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListElementView.swift; sourceTree = "<group>"; };
 		E777EC90293FA19500CF2F06 /* beerToBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beerToBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E777EC93293FA19500CF2F06 /* beerToBeerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beerToBeerApp.swift; sourceTree = "<group>"; };
@@ -75,6 +81,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20819EEF2940979900615866 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20819EEB294096A600615866 /* JSONLoad.swift */,
+				20819EED2940979100615866 /* BeerClass.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		20819EF2294098BC00615866 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E777EC95293FA19500CF2F06 /* ContentView.swift */,
+				E777ECBD293FA26D00CF2F06 /* ListView.swift */,
+				E7368259293FD6AB0076934F /* ListElementView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E777EC87293FA19500CF2F06 = {
 			isa = PBXGroup;
 			children = (
@@ -98,12 +123,12 @@
 		E777EC92293FA19500CF2F06 /* beerToBeer */ = {
 			isa = PBXGroup;
 			children = (
+				20819EF2294098BC00615866 /* Views */,
+				20819EEF2940979900615866 /* Models */,
 				E777EC93293FA19500CF2F06 /* beerToBeerApp.swift */,
-				E777EC95293FA19500CF2F06 /* ContentView.swift */,
+				20819EF0294098AB00615866 /* BeerList.json */,
 				E777EC97293FA19600CF2F06 /* Assets.xcassets */,
 				E777EC99293FA19600CF2F06 /* Preview Content */,
-				E777ECBD293FA26D00CF2F06 /* ListView.swift */,
-				E7368259293FD6AB0076934F /* ListElementView.swift */,
 			);
 			path = beerToBeer;
 			sourceTree = "<group>";
@@ -237,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20819EF1294098AB00615866 /* BeerList.json in Resources */,
 				E777EC9B293FA19600CF2F06 /* Preview Assets.xcassets in Resources */,
 				E777EC98293FA19600CF2F06 /* Assets.xcassets in Resources */,
 			);
@@ -263,9 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20819EEE2940979100615866 /* BeerClass.swift in Sources */,
 				E777EC96293FA19500CF2F06 /* ContentView.swift in Sources */,
 				E736825A293FD6AB0076934F /* ListElementView.swift in Sources */,
 				E777EC94293FA19500CF2F06 /* beerToBeerApp.swift in Sources */,
+				20819EEC294096A600615866 /* JSONLoad.swift in Sources */,
 				E777ECBE293FA26D00CF2F06 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

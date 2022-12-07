@@ -27,9 +27,9 @@ struct ListView: View {
             ScrollView{
                 ForEach(0..<3, id:\.self){ index in
                     ListElementView(imageName: "\(index)", name: "\(names[index])", grad: "bho %", type: "nun o socc", foodAdvice: "magn't o cazz \(index)", activeIndex: $indexHandler, localIndex: index)
-                    RoundedRectangle(cornerRadius: 10)
+                    /*RoundedRectangle(cornerRadius: 10)
                         .frame(width: width * 0.95, height: height * 0.0025)
-                        .foregroundColor(Color("30"))
+                        .foregroundColor(Color("30"))*/
                 }
             }
             .frame(width: width*0.9)

@@ -13,7 +13,7 @@ struct ContentView: View {
             TabView{
                 ListView()
                     .tabItem{
-                        Image(systemName: "list.bullet")
+                        Label("List", systemImage: "book")
                     }
                 
             }
