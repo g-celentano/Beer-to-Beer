@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E736825A293FD6AB0076934F /* ListElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7368259293FD6AB0076934F /* ListElementView.swift */; };
 		E777EC94293FA19500CF2F06 /* beerToBeerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E777EC93293FA19500CF2F06 /* beerToBeerApp.swift */; };
 		E777EC96293FA19500CF2F06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E777EC95293FA19500CF2F06 /* ContentView.swift */; };
 		E777EC98293FA19600CF2F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E777EC97293FA19600CF2F06 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7368259293FD6AB0076934F /* ListElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListElementView.swift; sourceTree = "<group>"; };
 		E777EC90293FA19500CF2F06 /* beerToBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beerToBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E777EC93293FA19500CF2F06 /* beerToBeerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beerToBeerApp.swift; sourceTree = "<group>"; };
 		E777EC95293FA19500CF2F06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				E777EC97293FA19600CF2F06 /* Assets.xcassets */,
 				E777EC99293FA19600CF2F06 /* Preview Content */,
 				E777ECBD293FA26D00CF2F06 /* ListView.swift */,
+				E7368259293FD6AB0076934F /* ListElementView.swift */,
 			);
 			path = beerToBeer;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E777EC96293FA19500CF2F06 /* ContentView.swift in Sources */,
+				E736825A293FD6AB0076934F /* ListElementView.swift in Sources */,
 				E777EC94293FA19500CF2F06 /* beerToBeerApp.swift in Sources */,
 				E777ECBE293FA26D00CF2F06 /* ListView.swift in Sources */,
 			);

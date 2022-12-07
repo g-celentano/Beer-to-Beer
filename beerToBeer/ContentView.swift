@@ -11,8 +11,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView{
+                ListView()
+                    .tabItem{
+                        Image(systemName: "list.bullet")
+                    }
                 
             }
+            .accentColor(Color("30"))
            
         }
         .padding()

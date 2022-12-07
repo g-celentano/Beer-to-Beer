@@ -14,49 +14,30 @@ struct ListView: View {
     @State var fonts = [Font.title2, Font.title2, Font.title2]
     @State var clicked = -1
     @State var heights = [ height * 0.1,height * 0.1,height * 0.1]
+    @State var indexHandler = -1
+    
     var body: some View {
-        ScrollView{
-            ForEach(0..<3, id:\.self){ index in
-                HStack{
-                    Image("\(index)")
-                        .scaleEffect(2)
-                        .padding(.trailing)
-                    VStack{
-                        Text("\(names[index])")
-                            .padding(.top, 0)
-                        Spacer()
-                    }
-                        .font(fonts[index])
-                    Spacer()
+        VStack{
+            Text("All Beers")
+                .font(.largeTitle)
+                .foregroundColor(Color("30"))
+                .fontWeight(.heavy)
+                .frame(width: width * 0.9, alignment: .leading)
+
+            ScrollView{
+                ForEach(0..<3, id:\.self){ index in
+                    ListElementView(imageName: "\(index)", name: "\(names[index])", grad: "bho %", type: "nun o socc", foodAdvice: "magn't o cazz \(index)", activeIndex: $indexHandler, localIndex: index)
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(width: width * 0.95, height: height * 0.0025)
+                        .foregroundColor(Color("30"))
                 }
-                .padding()
-                .frame(height: heights[index])
-                .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.clear))
-                .clipped()
-                .onTapGesture {
-                    withAnimation {
-                        clicked = clicked == index ? -1 : index
-                        if clicked != -1 {
-                            fonts[clicked] = Font.largeTitle
-                            heights[clicked] = height * 0.3
-                            for i in 0..<fonts.count{
-                                if i != clicked{
-                                    fonts[i] = Font.title2
-                                    heights[i] = height * 0.1
-                                }
-                            }
-                        } else {
-                            for i in 0..<fonts.count{
-                                fonts[i] = Font.title2
-                                heights[i] = height * 0.1
-                            }
-                        }
-                    }
-                }
-                
-               
             }
+            .frame(width: width*0.9)
+            .padding()
+            
         }
+        .background(Color("60"))
+        
         
     }
 }
