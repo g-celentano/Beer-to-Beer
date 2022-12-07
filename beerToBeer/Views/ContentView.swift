@@ -27,7 +27,7 @@ struct ContentView: View {
                         
                 }
                 .toolbar(.visible, for: .tabBar)
-                .toolbarBackground(Color("60").opacity(0), for: .tabBar)
+                .toolbarBackground(Color("60").opacity(0.1), for: .tabBar)
                     
                 
             }

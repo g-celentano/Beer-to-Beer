@@ -17,6 +17,7 @@ struct TodaysBeer: View {
                 .fontWeight(.heavy)
                 .foregroundColor(Color("30"))
                 .frame(width: width*0.9, alignment: .leading)
+                .padding(.top)
                 
             
             
@@ -26,6 +27,7 @@ struct TodaysBeer: View {
                     .rotationEffect(.degrees(15))
                     .frame(width: width * 0.38, height: height*0.3)
                     .padding(.trailing)
+                
                     
                 Spacer()
                 VStack{
@@ -64,6 +66,7 @@ struct TodaysBeer: View {
                 
             }
             .frame(width: width)
+            Spacer()
             
             
         }

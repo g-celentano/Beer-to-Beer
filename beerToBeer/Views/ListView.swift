@@ -23,20 +23,21 @@ struct ListView: View {
                 .foregroundColor(Color("30"))
                 .fontWeight(.heavy)
                 .frame(width: width * 0.9, alignment: .leading)
+                .padding(.top)
 
             ScrollView{
-                ForEach(0..<beerList.count, id:\.self){ index in
-                    ListElementView(beer: beerList[index], activeIndex: $indexHandler, localIndex: index)
+                ForEach(beerList, id:\.self){ beer in
+                    ListElementView(beer: beer, activeIndex: $indexHandler, localIndex: beerList.firstIndex(of: beer)!)
                     /*RoundedRectangle(cornerRadius: 10)
                         .frame(width: width * 0.95, height: height * 0.0025)
                         .foregroundColor(Color("30"))*/
                 }
             }
-            .frame(width: width*0.9)
+            .frame(width: width)
             
             .padding()
         }
-        .edgesIgnoringSafeArea(.bottom)
+        
         .background(Color("60"))
         
         

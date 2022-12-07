@@ -67,6 +67,7 @@ struct ListElementView: View {
                 .frame(height: clicked ? height * 0.2 : 0)
                 Spacer()
             }
+            
             Spacer()
         }
         .padding()
@@ -75,7 +76,7 @@ struct ListElementView: View {
         //.foregroundColor(Color("personalRed"))
         .foregroundColor(Color("60"))
         .clipped()
-        .onChange(of: activeIndex, perform: { newValue in
+        /*.onChange(of: activeIndex, perform: { newValue in
             withAnimation{
                 if newValue != localIndex {
                     clicked = false
@@ -84,25 +85,31 @@ struct ListElementView: View {
                     iconRotation = 0.0
                 }
             }
-        })
+        })*/
         .onTapGesture {
             withAnimation {
-                if activeIndex != localIndex {
-                    activeIndex = localIndex
-                    clicked = true
-                    font = Font.largeTitle
-                    localHeight = height * 0.3
-                    iconRotation = -90.0
+                clicked.toggle()
+                if clicked {
+                    if activeIndex != localIndex{
+                        activeIndex = localIndex
+                        font = Font.largeTitle
+                        localHeight = height * 0.3
+                        iconRotation = -90.0
+                    } else {
+                        font  = Font.title2
+                        localHeight = height * 0.1
+                        iconRotation = 0.0
+                    }
                     
                 } else {
                     activeIndex = -1
-                    clicked = false
                     font  = Font.title2
                     localHeight = height * 0.1
                     iconRotation = 0.0
                 }
             }
         }
+        
         
     }
 }
