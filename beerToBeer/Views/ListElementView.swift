@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct ListElementView: View {
-    @State var imageName : String
-    @State var name : String
-    @State var grad : String
-    @State var type : String
-    @State var foodAdvice : String
+    @State var beer : BeerClass
     @Binding var activeIndex : Int
     @State var localIndex : Int
     
@@ -22,19 +18,20 @@ struct ListElementView: View {
     @State var iconRotation = 0.0
     var body: some View {
         HStack{
-            Image(imageName)
+            Image(beer.imageName)
                 .scaleEffect(clicked ? 2.2 : 2)
                 .padding(.trailing)
                 .padding(.leading)
             VStack{
                 HStack{
-                    Text(name)
+                    Text(beer.name)
                         .font(font)
                         .fontWeight(.bold)
                     Spacer()
                     Image(systemName: "chevron.right")
                         .scaleEffect(width * 0.0035)
                         .rotationEffect(.degrees(iconRotation))
+                        .padding(.trailing, width*0.01)
                 }
                 .padding(.top, clicked ? height * 0.01 : height * 0.02)
                 .frame(width: width * 0.7, alignment: .leading)
@@ -43,21 +40,21 @@ struct ListElementView: View {
                     HStack{
                         Text("Gradation: ")
                             .fontWeight(.semibold)
-                        Text(grad)
+                        Text(beer.grad)
                     }
                     .frame(width: width*0.65, alignment: .leading)
                     .padding(.top, height * 0.01)
                     HStack{
                         Text("Type: ")
                             .fontWeight(.semibold)
-                        Text(type)
+                        Text(beer.type)
                     }
                     .frame(width: width*0.65, alignment: .leading)
                     .padding(.top, height * 0.01)
                     HStack{
                         Text("Food Advice: ")
                             .fontWeight(.semibold)
-                        Text(foodAdvice)
+                        Text(beer.foodAdvice)
                             
                     }
                     .frame(width: width*0.65, alignment: .leading)
@@ -111,6 +108,6 @@ struct ListElementView: View {
 
 struct ListElementView_Previews: PreviewProvider {
     static var previews: some View {
-        ListElementView(imageName: "0", name: "Ichnusa", grad: "Ah bho", type: "Nossò", foodAdvice: "Magn't o cazz", activeIndex: .constant(-1), localIndex: 0)
+        ListElementView(beer: BeerClass(name: "Ciao mondo", imageName: "0", type: "tipo", grad: "gradi", foodAdvice: "cibo", beerDesc: "Descrizione"), activeIndex: .constant(-1), localIndex: 0)
     }
 }

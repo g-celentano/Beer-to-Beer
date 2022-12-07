@@ -10,12 +10,17 @@ import SwiftUI
 let beerList: [BeerClass] = load("BeerList")
 
 struct ContentView: View {
+    
     var body: some View {
         VStack {
             TabView{
                 ListView()
                     .tabItem{
                         Label("List", systemImage: "book")
+                    }
+                TodaysBeer(beer: beerList.randomElement() ?? BeerClass())
+                    .tabItem {
+                        Label("Today's Beer", systemImage: "sun.and.horizon")
                     }
                 
             }
