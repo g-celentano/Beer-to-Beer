@@ -7,18 +7,24 @@
 
 import Foundation
 
-extension JSONSerialization {
-    
-    static func loadJSON(withFilename filename: String) throws -> Any? {
-        let fm = FileManager.default
-        let urls = fm.urls(for: .documentDirectory, in: .userDomainMask)
-        if let url = urls.first {
-            var fileURL = url.appendingPathComponent(filename)
-            fileURL = fileURL.appendingPathExtension("json")
-            let data = try Data(contentsOf: fileURL)
-            let jsonObject = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers, .mutableLeaves])
-            return jsonObject
-        }
-        return nil
+func load<T: Decodable>(_ filename: String) -> T {
+    let data: Data
+
+    guard let file = Bundle.main.url(forResource: filename, withExtension: ".json")
+        else {
+            fatalError("Couldn't find \(filename) in main bundle.")
+    }
+
+    do {
+        data = try Data(contentsOf: file)
+    } catch {
+        fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
+    }
+
+    do {
+        let decoder = JSONDecoder()
+        return try decoder.decode(T.self, from: data)
+    } catch {
+        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }

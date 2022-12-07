@@ -7,16 +7,19 @@
 
 import Foundation
 
-final class BeerClass : JSONSerialization {
+struct BeerClass : Codable {
     var imageName: String
     var name: String
     var type: String
     var foodAdvice: String
     
-    init(beerName: String, beerImage: String, beerType: String, beerFoodAdvice: String) {
-        imageName = beerImage
-        name = beerName
-        type = beerType
-        foodAdvice = beerFoodAdvice
+    init() {
+        imageName = ""
+        name = ""
+        type = ""
+        foodAdvice = ""
     }
+    
 }
+
+

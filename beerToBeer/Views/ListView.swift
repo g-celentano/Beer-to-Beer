@@ -34,7 +34,6 @@ struct ListView: View {
             }
             .frame(width: width*0.9)
             .padding()
-            
         }
         .background(Color("60"))
         

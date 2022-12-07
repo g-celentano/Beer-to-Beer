@@ -1,6 +1,26 @@
-'{
-    "name":"Ichnusa",
-    "imageName":"0",
-    "type":"Golden Lager with low fermentation",
-    "foodAdvice":"Magn't o cazz"
-}'
+[
+    {
+        "name" : "Ichnusa",
+        "imageName" : "0",
+        "type" : "Golden Lager ... ",
+        "foodAdvice" : "Magn't o cazz"
+    },
+    {
+        "name" : "Ichnusa",
+        "imageName" : "0",
+        "type" : "Golden Lager ... ",
+        "foodAdvice" : "Magn't o cazz"
+    },
+    {
+        "name" : "Ichnusa",
+        "imageName" : "0",
+        "type" : "Golden Lager ... ",
+        "foodAdvice" : "Magn't o cazz"
+    },
+    {
+        "name" : "Ichnusa",
+        "imageName" : "0",
+        "type" : "Golden Lager ... ",
+        "foodAdvice" : "Magn't o cazz"
+    },
+]

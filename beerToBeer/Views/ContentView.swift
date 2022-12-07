@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let beerList: [BeerClass] = load("BeerList")
+    
     var body: some View {
         VStack {
             TabView{
