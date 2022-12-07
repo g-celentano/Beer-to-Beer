@@ -11,13 +11,15 @@ struct BeerClass : Codable {
     var imageName: String
     var name: String
     var type: String
-    var foodAdvice: String
+    var nationality: String
+    var alcoholContent: String
     
     init() {
         imageName = ""
         name = ""
         type = ""
-        foodAdvice = ""
+        nationality = ""
+        alcoholContent = ""
     }
     
 }

@@ -2,25 +2,36 @@
     {
         "name" : "Ichnusa",
         "imageName" : "0",
-        "type" : "Golden Lager ... ",
-        "foodAdvice" : "Magn't o cazz"
+        "type" : "Golden Lager with bottom fermentation ",
+        "nationality" : "Italian🇮🇹",
+        "alcoholContet" : "4,7%"
     },
     {
-        "name" : "Ichnusa",
+        "name" : "Heineken",
         "imageName" : "0",
-        "type" : "Golden Lager ... ",
-        "foodAdvice" : "Magn't o cazz"
+        "type" : "Golden Pilsner with bottom fermentation",
+        "nationality" : "Dutch🇳🇱",
+        "alcoholContet" : "5,0%"
     },
     {
-        "name" : "Ichnusa",
+        "name" : "Beck's",
         "imageName" : "0",
-        "type" : "Golden Lager ... ",
-        "foodAdvice" : "Magn't o cazz"
+        "type" : "Light yellow Pilsner with bottom fermentation",
+        "nationality" : "Germany🇩🇪",
+        "alcoholContet" : "5,0%"
     },
     {
-        "name" : "Ichnusa",
+        "name" : "Tennent's Super",
         "imageName" : "0",
-        "type" : "Golden Lager ... ",
-        "foodAdvice" : "Magn't o cazz"
+        "type" : "Intense yellow Lager with bottom fermentation",
+        "nationality" : "Magn't o cazz",
+        "alcoholContet" : "9,0%"
+    },
+    {
+        "name" : "Tennent's Super",
+        "imageName" : "0",
+        "type" : "Intense yellow Lager with bottom fermentation",
+        "nationality" : "Magn't o cazz",
+        "alcoholContet" : "9,0%"
     },
 ]

@@ -7,10 +7,9 @@
 
 import SwiftUI
 
+let beerList: [BeerClass] = load("BeerList")
+
 struct ContentView: View {
-    
-    let beerList: [BeerClass] = load("BeerList")
-    
     var body: some View {
         VStack {
             TabView{
@@ -21,7 +20,6 @@ struct ContentView: View {
                 
             }
             .accentColor(Color("30"))
-           
         }
         .padding()
         .background(Color("60"))
