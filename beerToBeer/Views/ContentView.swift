@@ -17,7 +17,7 @@ struct ContentView: View {
                 Group{
                     ListView()
                         .tabItem{
-                            Label("List", systemImage: "book")
+                            Label("Beer List", systemImage: "book")
                         }
                     
                     TodaysBeer(beer: beerList.randomElement() ?? BeerClass())
