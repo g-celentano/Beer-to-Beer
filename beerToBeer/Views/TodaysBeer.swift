@@ -53,12 +53,11 @@ struct TodaysBeer: View {
                     .frame(width: width*0.5, alignment: .leading)
                     .padding(.top, height*0.001)
                     
-                    ScrollView{
+                    //ScrollView{
                         Text(beer.beerDesc)
                         .frame(width: width*0.5, alignment: .leading)
                         .padding(.top, height*0.001)
-                        
-                    }
+                    //}
                     
                 }
                 .foregroundColor(.white)
