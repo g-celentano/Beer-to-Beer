@@ -20,19 +20,27 @@ struct ListView: View {
                 .fontWeight(.heavy)
                 .frame(width: width * 0.9, alignment: .leading)
 
-                //trying to put the selected item in the viewport
+                
             
-                    ScrollView{
-                        ForEach(beerList, id:\.self){ beer in
-                            ListElementView(beer: beer, localIdx: beerList.firstIndex(of: beer)!, activeIndex: $indexHandler)
-                                
-                            /*RoundedRectangle(cornerRadius: 10)
-                                .frame(width: width * 0.95, height: height * 0.0025)
-                                .foregroundColor(Color("30"))*/
+                    ScrollViewReader{ reader in
+                        ScrollView{
+                            ForEach(beerList, id:\.self){ beer in
+                                ListElementView(beer: beer, localIdx: beerList.firstIndex(of: beer)!, activeIndex: $indexHandler)
+                                    .id(beerList.firstIndex(of: beer)!)
+                                    .onChange(of: indexHandler) { newValue in
+                                        withAnimation{
+                                            reader.scrollTo(indexHandler)
+                                        }
+                                    }
+                                    
+                                /*RoundedRectangle(cornerRadius: 10)
+                                    .frame(width: width * 0.95, height: height * 0.0025)
+                                    .foregroundColor(Color("30"))*/
+                            }
                         }
+                        .cornerRadius(10)
+                        .padding()
                     }
-                    .cornerRadius(10)
-                    .padding()
                 
         }
         .frame(maxWidth: .infinity)
