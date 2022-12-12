@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1547FBC6294765A200A1B83D /* SuggestRandomBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1547FBC5294765A200A1B83D /* SuggestRandomBeerView.swift */; };
 		159C39E32940FB3800F9C800 /* SuggestRandomBeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159C39E22940FB3800F9C800 /* SuggestRandomBeer.swift */; };
 		159C39E52940FBA000F9C800 /* SuggestRandomBeerShortcutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159C39E42940FBA000F9C800 /* SuggestRandomBeerShortcutProvider.swift */; };
 		20819EEC294096A600615866 /* JSONLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20819EEB294096A600615866 /* JSONLoad.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1547FBC5294765A200A1B83D /* SuggestRandomBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestRandomBeerView.swift; sourceTree = "<group>"; };
 		159C39E22940FB3800F9C800 /* SuggestRandomBeer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestRandomBeer.swift; sourceTree = "<group>"; };
 		159C39E42940FBA000F9C800 /* SuggestRandomBeerShortcutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestRandomBeerShortcutProvider.swift; sourceTree = "<group>"; };
 		20819EEB294096A600615866 /* JSONLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoad.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				159C39E22940FB3800F9C800 /* SuggestRandomBeer.swift */,
 				159C39E42940FBA000F9C800 /* SuggestRandomBeerShortcutProvider.swift */,
+				1547FBC5294765A200A1B83D /* SuggestRandomBeerView.swift */,
 			);
 			path = AppIntents;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				E777EC96293FA19500CF2F06 /* ContentView.swift in Sources */,
 				E736825A293FD6AB0076934F /* ListElementView.swift in Sources */,
 				159C39E32940FB3800F9C800 /* SuggestRandomBeer.swift in Sources */,
+				1547FBC6294765A200A1B83D /* SuggestRandomBeerView.swift in Sources */,
 				E777EC94293FA19500CF2F06 /* beerToBeerApp.swift in Sources */,
 				20819EEC294096A600615866 /* JSONLoad.swift in Sources */,
 				E777ECBE293FA26D00CF2F06 /* ListView.swift in Sources */,

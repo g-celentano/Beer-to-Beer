@@ -26,6 +26,6 @@ struct SuggestRandomBeer: AppIntent{
                                         "Don't drink too \(tempBeer.name)!",
                                         "If you don't have to drive, \(tempBeer.name) is the right choice"]
         
-        return .result(dialog: Answers.randomElement()!, view: SuggestRanomBeerView(beer: tempBeer))
+        return .result(dialog: Answers.randomElement()!, view: SuggestRandomBeerView(Beer: tempBeer))
     }
 }
