@@ -18,17 +18,24 @@ struct TodaysBeer: View {
                 .foregroundColor(Color("30"))
                 .frame(width: width*0.9, alignment: .leading)
                 .padding(.top)
-                
-            
-            
             HStack{
-                Image(beer.imageName)
-                    .scaleEffect(width*0.0016)
-                    .rotationEffect(.degrees(15))
-                    .frame(width: width * 0.38, height: height*0.3)
-                    .padding(.trailing)
-                
+                ZStack {
+                    Image(beer.imageName)
+                        .renderingMode(.template)
+                        .scaleEffect(width*0.0016)
+                        .rotationEffect(.degrees(15))
+                        .frame(width: width * 0.38, height: height*0.3)
+                        .padding(.trailing)
+                        .opacity(0.2)
+                        .blur(radius: 8.0)
+                        .offset(x: 30.0, y: 30.0)
                     
+                    Image(beer.imageName)
+                        .scaleEffect(width*0.0016)
+                        .rotationEffect(.degrees(15))
+                        .frame(width: width * 0.38, height: height*0.3)
+                        .padding(.trailing)
+                }
                 Spacer()
                 VStack{
                     Text(beer.name)
