@@ -11,13 +11,11 @@ struct TodaysBeer: View {
     @State var beer : BeerClass
     var body: some View {
         VStack{
-            Spacer()
             Text("Today's Beer")
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .foregroundColor(Color("30"))
                 .frame(width: width*0.9, alignment: .leading)
-                .padding(.top)
             HStack{
                 ZStack {
                     Image(beer.imageName)
@@ -69,7 +67,7 @@ struct TodaysBeer: View {
                     
                 }
                 .foregroundColor(.white)
-                .frame(height: height * 0.8, alignment: .top)
+                .frame(maxHeight: .infinity, alignment: .top)
                 
             }
             .frame(width: width)
@@ -77,7 +75,7 @@ struct TodaysBeer: View {
             
             
         }
-        .frame(width: width, height: height)
+        .frame(width: width)
         .background(Color("60"))
         
         
