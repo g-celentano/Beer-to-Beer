@@ -34,7 +34,7 @@ struct BeerClass : Codable, Hashable {
     }
     
     func hasPrefix(_ prefix: String) -> Bool {
-        return name.hasPrefix(prefix)
+        return name.uppercased().hasPrefix(prefix.uppercased())
     }
     
 }

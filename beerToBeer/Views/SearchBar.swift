@@ -7,23 +7,48 @@
 
 import SwiftUI
 
+extension View {
+    func placeholder<Content: View>(
+        when shouldShow: Bool,
+        alignment: Alignment = .leading,
+        @ViewBuilder placeholder: () -> Content) -> some View {
+
+        ZStack(alignment: alignment) {
+            placeholder().opacity(shouldShow ? 1 : 0)
+            self
+        }
+    }
+}
+
 struct SearchBar: View {
     
     @Binding var searchValue: String
     
     var body: some View {
+        
         HStack{
             Image(systemName: "magnifyingglass")
-                .padding(.leading)
-            TextField("Search...", text: $searchValue)
-                .tint(Color("30"))
-                .keyboardType(UIKeyboardType.default)
-                
+            TextField("", text: $searchValue)\
+                .placeholder(when: searchValue.isEmpty) {
+                        Text("Search...").foregroundColor(.gray)
+                }
+            
+            Spacer()
+            Button{
+                searchValue = ""
+            } label:{
+                Image(systemName: "x.circle.fill")
+                    .opacity(searchValue.isEmpty ? 0.0 : 1.0)
+            }
+            
         }
-        .frame(height: height*0.04)
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: height*0.04)
         .background(Color("listElBG"))
         .cornerRadius(10)
+        .tint(Color("30"))
         .foregroundColor(Color("60"))
+        
     }
 }
 
