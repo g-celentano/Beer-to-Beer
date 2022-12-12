@@ -23,6 +23,7 @@
 		E777ECAF293FA19600CF2F06 /* beerToBeerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E777ECAE293FA19600CF2F06 /* beerToBeerUITests.swift */; };
 		E777ECB1293FA19600CF2F06 /* beerToBeerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E777ECB0293FA19600CF2F06 /* beerToBeerUITestsLaunchTests.swift */; };
 		E777ECBE293FA26D00CF2F06 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E777ECBD293FA26D00CF2F06 /* ListView.swift */; };
+		E78C409629476F8D00E8F829 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78C409529476F8D00E8F829 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		E777ECAE293FA19600CF2F06 /* beerToBeerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beerToBeerUITests.swift; sourceTree = "<group>"; };
 		E777ECB0293FA19600CF2F06 /* beerToBeerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beerToBeerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E777ECBD293FA26D00CF2F06 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		E78C409529476F8D00E8F829 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				E777ECBD293FA26D00CF2F06 /* ListView.swift */,
 				E7368259293FD6AB0076934F /* ListElementView.swift */,
 				E761DD692940D6CA00402949 /* TodaysBeer.swift */,
+				E78C409529476F8D00E8F829 /* SearchBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				20819EEC294096A600615866 /* JSONLoad.swift in Sources */,
 				E777ECBE293FA26D00CF2F06 /* ListView.swift in Sources */,
 				E761DD6A2940D6CA00402949 /* TodaysBeer.swift in Sources */,
+				E78C409629476F8D00E8F829 /* SearchBar.swift in Sources */,
 				159C39E52940FBA000F9C800 /* SuggestRandomBeerShortcutProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,6 +33,10 @@ struct BeerClass : Codable, Hashable {
         self.beerDesc = beerDesc
     }
     
+    func hasPrefix(_ prefix: String) -> Bool {
+        return name.hasPrefix(prefix)
+    }
+    
 }
 
 
