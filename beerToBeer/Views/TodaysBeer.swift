@@ -29,6 +29,7 @@ struct TodaysBeer: View {
                         .opacity(0.2)
                         .blur(radius: 8.0)
                         .offset(x: 30.0, y: 30.0)
+                        .foregroundColor(.black)
                     
                     Image(beer.imageName)
                         .scaleEffect(width*0.0016)
