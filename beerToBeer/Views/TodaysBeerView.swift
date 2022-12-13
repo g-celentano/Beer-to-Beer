@@ -74,12 +74,11 @@ struct TodaysBeerView: View {
             .frame(width: width)
             .background(Color("60"))
             .toolbar{
-                ToolbarItem(placement: .principal) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Text("Today's Beer")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .foregroundColor(Color("30"))
-                        .frame(width: width*0.9, alignment: .leading)
          
                 }
             }
