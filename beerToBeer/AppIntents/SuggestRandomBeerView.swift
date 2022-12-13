@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct SuggestRandomBeerView: View {
-    var Beer : BeerClass
+    var beer : Beer
     
     var body: some View {
         HStack{
-            Image(Beer.imageName)
+            Image(beer.imageName)
                 .resizable()
                 .scaledToFit()
                 .padding(.vertical)
@@ -21,17 +21,17 @@ struct SuggestRandomBeerView: View {
                 HStack{
                     Text("Name:")
                         .fontWeight(.semibold)
-                    Text(Beer.name)
+                    Text(beer.name)
                 }
                 HStack{
                     Text("Gradation:")
                         .fontWeight(.semibold)
-                    Text(Beer.grad)
+                    Text(beer.grad)
                 }
                 HStack{
                     Text("Nationality:")
                         .fontWeight(.semibold)
-                    Text(Beer.nationality)
+                    Text(beer.nationality)
                 }
             }
         }
@@ -41,8 +41,8 @@ struct SuggestRandomBeerView: View {
 struct SuggestRandomBeerView_Previews: PreviewProvider {
     static var previews: some View {
         
-        let Beers : [BeerClass] = load("BeerList")
+        let beers : [Beer] = load("BeerList")
         
-        SuggestRandomBeerView(Beer: Beers[0])
+        SuggestRandomBeerView(beer: beers[0])
     }
 }

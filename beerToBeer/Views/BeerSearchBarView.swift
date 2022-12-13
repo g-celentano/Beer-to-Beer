@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension View {
+extension TextField {
     func placeholder<Content: View>(
         when shouldShow: Bool,
         alignment: Alignment = .leading,
@@ -20,7 +20,7 @@ extension View {
     }
 }
 
-struct SearchBar: View {
+struct BeerSearchBarView: View {
     
     @Binding var searchValue: String
     
@@ -28,22 +28,24 @@ struct SearchBar: View {
         
         HStack{
             Image(systemName: "magnifyingglass")
-            TextField("", text: $searchValue)
-                .placeholder(when: searchValue.isEmpty) {
-                        Text("Search...").foregroundColor(.gray)
+            HStack{
+                TextField("", text: $searchValue)
+                    .placeholder(when: searchValue.isEmpty) {
+                            Text("Search...").foregroundColor(.gray)
+                    }
+                
+                Spacer()
+                Button{
+                    searchValue = ""
+                } label:{
+                    Image(systemName: "x.circle.fill")
+                        .opacity(searchValue.isEmpty ? 0.0 : 1.0)
                 }
-            
-            Spacer()
-            Button{
-                searchValue = ""
-            } label:{
-                Image(systemName: "x.circle.fill")
-                    .opacity(searchValue.isEmpty ? 0.0 : 1.0)
             }
             
         }
         .padding()
-        .frame(maxWidth: .infinity, maxHeight: height*0.04)
+        .frame(maxWidth: .infinity, maxHeight: width * 0.1)
         .background(Color("listElBG"))
         .cornerRadius(10)
         .tint(Color("30"))
@@ -52,8 +54,8 @@ struct SearchBar: View {
     }
 }
 
-struct SearchBar_Previews: PreviewProvider {
+struct BeerSearchBarView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBar(searchValue: .constant(""))
+        BeerSearchBarView(searchValue: .constant(""))
     }
 }

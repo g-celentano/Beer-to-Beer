@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ListElementView: View {
-    @State var beer : BeerClass
+struct BeerListElementView: View {
+    @State var beer : Beer
     @State var localIdx : Int
     @Binding var activeIndex : Int
     
@@ -96,8 +96,8 @@ struct ListElementView: View {
     }
 }
 
-struct ListElementView_Previews: PreviewProvider {
+struct BeerListElement_Previews: PreviewProvider {
     static var previews: some View {
-        ListElementView(beer: BeerClass(name: "Ciao mondo", imageName: "ichnusa", type: "tipo da due righe di merda cosi lunghe", grad: "gradi", nationality: "nazione", beerDesc: "Descrizione"), localIdx: 0, activeIndex: .constant(0))
+        BeerListElementView(beer: Beer(name: "Ciao mondo", imageName: "ichnusa", type: "tipo da due righe di merda cosi lunghe", grad: "gradi", nationality: "nazione", beerDesc: "Descrizione"), localIdx: 0, activeIndex: .constant(0))
     }
 }

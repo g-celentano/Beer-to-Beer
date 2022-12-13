@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BeerClass : Codable, Hashable {
+struct Beer : Codable, Hashable {
     var imageName: String
     var name: String
     var grad: String

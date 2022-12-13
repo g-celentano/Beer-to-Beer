@@ -14,7 +14,7 @@ struct SuggestRandomBeer: AppIntent{
     static var authenticationPolicy: IntentAuthenticationPolicy = .alwaysAllowed
     
     func perform() async throws -> some ProvidesDialog & ShowsSnippetView {
-        let beerList: [BeerClass] = load("BeerList")
+        let beerList: [Beer] = load("BeerList")
         let tryTempBeer = beerList.randomElement()
         
         guard let tempBeer = tryTempBeer else{
@@ -26,6 +26,6 @@ struct SuggestRandomBeer: AppIntent{
                                         "Don't drink too \(tempBeer.name)!",
                                         "If you don't have to drive, \(tempBeer.name) is the right choice"]
         
-        return .result(dialog: Answers.randomElement()!, view: SuggestRandomBeerView(Beer: tempBeer))
+        return .result(dialog: Answers.randomElement()!, view: SuggestRandomBeerView(beer: tempBeer))
     }
 }

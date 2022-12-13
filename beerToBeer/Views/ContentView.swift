@@ -7,45 +7,30 @@
 
 import SwiftUI
 
-let beerList: [BeerClass] = load("BeerList")
+let beerList: [Beer] = load("BeerList")
 
 struct ContentView: View {
     
     var body: some View {
-        
             VStack {
                 TabView{
-                    //Group{
-                        ListView()
-                                .tabItem{
-                                    Label("Beer List", systemImage: "book")
-                                }
-                        
-                        
-                        TodaysBeer(beer: beerList.randomElement() ?? BeerClass())
-                            .tabItem {
-                                Label("Today's Beer", systemImage: "sun.and.horizon")
-                            }
-                            
-                    //}
-                   // .toolbar(.visible, for: .tabBar)
-                    //.toolbarBackground(.clear, for: .tabBar)
-                        
-                    
+                    BeerListView()
+                        .tabItem{
+                            Label("Beer List", systemImage: "book")
+                        }
+                    TodaysBeerView(beer: beerList.randomElement() ?? Beer())
+                        .tabItem {
+                            Label("Today's Beer", systemImage: "sun.and.horizon")
+                        }
                 }
                 .frame(width: width)
-                .edgesIgnoringSafeArea(.leading)
                 .accentColor(Color("30"))
-                
-                
-
             }
             .padding()
             .background(Color("60"))
             .preferredColorScheme(.dark)
+            .edgesIgnoringSafeArea(.bottom)
             .ignoresSafeArea(.keyboard)
-        
-    
     }
 }
 
