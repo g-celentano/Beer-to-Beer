@@ -7,8 +7,16 @@
 
 import SwiftUI
 
+//struct SpecialViewHeightKey: PreferenceKey {
+//    static var defaultValue: CGFloat { 0 }
+//    static func reduce(value: inout Value, nextValue: () -> Value) {
+//        value = value + nextValue()
+//    }
+//}
+
 struct TodaysBeerView: View {
     @State var beer : Beer
+    @State private var fitInScreen = false
     var body: some View {
         NavigationStack{
             VStack{
@@ -22,7 +30,7 @@ struct TodaysBeerView: View {
                             .padding(.trailing)
                             .opacity(0.2)
                             .blur(radius: 8.0)
-                            .offset(x: 30.0, y: 30.0)
+                            .offset(x: width * 0.06, y: width * 0.1)
                             .foregroundColor(.black)
                         
                         Image(beer.imageName)
@@ -55,11 +63,20 @@ struct TodaysBeerView: View {
                         .frame(width: width*0.5, alignment: .leading)
                         .padding(.top, height*0.001)
                         
-                        //ScrollView{
-                            Text(beer.beerDesc)
-                            .frame(width: width*0.5, alignment: .leading)
-                            .padding(.top, height*0.001)
+                        //GeometryReader{gr in
+                            //ScrollView{
+                                Text(beer.beerDesc)
+                                .padding(.top, height*0.001)
+                                .padding(.trailing)
+                                .frame(width: width*0.5, alignment: .leading)
+                                //.background(GeometryReader{Color.clear.preference(key: SpecialViewHeightKey.self, value: $0.frame(in: .local).size.height)})
+                             //   .onPreferenceChange(SpecialViewHeightKey.self) {
+                             //        self.fitInScreen = $0 < gr.size.height
+                                //}
+                            //}
+                            //.scrollDisabled(self.fitInScreen)
                         //}
+                        
                         
                     }
                     .foregroundColor(.white)

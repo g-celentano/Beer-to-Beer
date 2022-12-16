@@ -33,12 +33,14 @@ struct BeerListView: View {
                                     }
                                 }
                         }
+                        
                     }
                     .cornerRadius(10)
                     .padding()
                     .onAppear{
                         reader.scrollTo(0)
                     }
+                    
                     
                 }
                     
@@ -53,8 +55,8 @@ struct BeerListView: View {
                         .fontWeight(.heavy)
                 }
             }
-            .searchable(text: $searchValue)
         }
+        .searchable(text: $searchValue)
 
     }
 }
