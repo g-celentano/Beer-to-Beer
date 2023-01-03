@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-//struct SpecialViewHeightKey: PreferenceKey {
-//    static var defaultValue: CGFloat { 0 }
-//    static func reduce(value: inout Value, nextValue: () -> Value) {
-//        value = value + nextValue()
-//    }
-//}
+struct SpecialViewHeightKey: PreferenceKey {
+    static var defaultValue: CGFloat { 0 }
+    static func reduce(value: inout Value, nextValue: () -> Value) {
+        value = value + nextValue()
+    }
+}
 
 struct TodaysBeerView: View {
     @State var beer : Beer
@@ -56,26 +56,33 @@ struct TodaysBeerView: View {
                         .frame(width: width*0.5, alignment: .leading)
                         
                         HStack{
-                            Text("Type: ")
-                                .fontWeight(.semibold)
-                            Text(beer.type)
+                            VStack{
+                                Text("Type: ")
+                                    .fontWeight(.semibold)
+                            }
+                            .frame(height: height * 0.12 ,alignment: .top)
+                            VStack{
+                                Text(beer.type)
+                            }
+                            .frame(height: height * 0.12,alignment: .top)
                         }
                         .frame(width: width*0.5, alignment: .leading)
                         .padding(.top, height*0.001)
                         
-                        //GeometryReader{gr in
-                            //ScrollView{
+                        GeometryReader{gr in
+                            ScrollView{
                                 Text(beer.beerDesc)
                                 .padding(.top, height*0.001)
                                 .padding(.trailing)
-                                .frame(width: width*0.5, alignment: .leading)
-                                //.background(GeometryReader{Color.clear.preference(key: SpecialViewHeightKey.self, value: $0.frame(in: .local).size.height)})
-                             //   .onPreferenceChange(SpecialViewHeightKey.self) {
-                             //        self.fitInScreen = $0 < gr.size.height
-                                //}
-                            //}
-                            //.scrollDisabled(self.fitInScreen)
-                        //}
+                                .background(GeometryReader{Color.clear.preference(key: SpecialViewHeightKey.self, value: $0.frame(in: .local).size.height)})
+                                .onPreferenceChange(SpecialViewHeightKey.self) {
+                                     self.fitInScreen = $0 < gr.size.height
+                                }
+                            }
+                            .scrollDisabled(self.fitInScreen)
+                        }
+                        
+                        .frame(width: width*0.5, alignment: .leading)
                         
                         
                     }

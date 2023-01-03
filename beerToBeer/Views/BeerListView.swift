@@ -37,9 +37,6 @@ struct BeerListView: View {
                     }
                     .cornerRadius(10)
                     .padding()
-                    .onAppear{
-                        reader.scrollTo(0)
-                    }
                     
                     
                 }

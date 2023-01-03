@@ -50,11 +50,16 @@ struct BeerListElementView: View {
                     .frame(width: width*0.65, alignment: .leading)
                     .padding(.top, height * 0.01)
                     HStack{
-                        Text("Type: ")
-                            .fontWeight(.semibold)
-                            .frame(height: height*0.05, alignment: .top)
-                        Text(beer.type)
-                            .padding(.trailing, width * 0.02)
+                        VStack{
+                            Text("Type: ")
+                                .fontWeight(.semibold)
+                        }
+                        .frame(height: height * 0.06, alignment: .top)
+                        VStack{
+                            Text(beer.type)
+                                .padding(.trailing, width * 0.02)
+                        }
+                        .frame(height: height * 0.06, alignment: .top)
                     }
                     .frame(width: width*0.65, alignment: .leading)
                     .padding(.top, height * 0.01)
@@ -83,7 +88,7 @@ struct BeerListElementView: View {
         .clipped()
         .contentShape(RoundedRectangle(cornerRadius: 10))
         .onTapGesture {
-            withAnimation {
+            withAnimation{
                 if activeIndex != localIdx {
                     activeIndex = localIdx
                 } else {
